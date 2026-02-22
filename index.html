@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Human Verification</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<div class="particles" id="particles"></div>
+
+
+<div class="creator">⚡ Created by <span>~VIKAS TIWARI</span></div>
+
+<!-- ══ Login Page ══ -->
+<div class="page" id="login-page">
+  <div class="card">
+    <div class="logo">
+      <div class="logo-icon">🔐</div>
+      <span class="logo-text">Veritas Auth</span>
+    </div>
+
+    <h1>Welcome back</h1>
+    <p class="subtitle">Prove you're human. It's easy… if you are.</p>
+
+    <!-- Name -->
+    <div class="field">
+      <label for="nameInput">Your Name</label>
+      <div class="input-wrap">
+        <span class="input-icon">👤</span>
+        <input type="text" id="nameInput" placeholder="Enter your name" autocomplete="off">
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="field">
+      <label for="passInput">Password</label>
+      <div class="input-wrap">
+        <span class="input-icon">🔑</span>
+        <input type="password" id="passInput" placeholder="Enter your password">
+      </div>
+    </div>
+
+    <div class="divider">Human Verification</div>
+
+    <!-- Math question -->
+    <div class="math-box">
+      <span class="math-badge">∫ Calc</span>
+      <span class="math-question" id="mathQuestion">Loading…</span>
+    </div>
+
+    <div class="field">
+      <label for="mathAnswer">Your Answer</label>
+      <div class="input-wrap">
+        <span class="input-icon">🧮</span>
+        <input type="number" id="mathAnswer" placeholder="Numeric answer (no +C needed)" autocomplete="off">
+      </div>
+      <div class="error-msg" id="errorMsg">Incorrect answer. Try again!</div>
+    </div>
+
+    <button class="btn" onclick="handleLogin()">Sign In →</button>
+  </div>
+</div>
+
+<!-- ══ Success Screen ══ -->
+<div id="success-screen">
+  <div class="success-emoji">🎉</div>
+  <h2 class="success-heading">WOW! Congratulations,<br>You Are Human!</h2>
+  <p class="success-sub">Identity verified. The machines remain confused.</p>
+  <div class="success-pills">
+    <span class="pill pill-purple">✓ Calculus Passed</span>
+    <span class="pill pill-cyan">✓ Identity Confirmed</span>
+    <span class="pill pill-amber">✓ 100% Human</span>
+  </div>
+  <button class="btn-explore" onclick="explore()">🚀 Explore Now</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
